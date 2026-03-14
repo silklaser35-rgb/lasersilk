@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lasersilk.ru/sitemap.xml
+Sitemap: https://laser-silk.ru/sitemap.xml
