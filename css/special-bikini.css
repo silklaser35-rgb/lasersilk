@@ -1,0 +1,1284 @@
+.hero-special {
+    padding: 20px 0 20px;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-special::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+    z-index: 0;
+}
+
+.hero-special::after {
+    content: '✨';
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    font-size: 2rem;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-special-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-special-label {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    border-radius: 60px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    animation: glow 2s ease-in-out infinite;
+    width: fit-content;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+    }
+}
+
+.hero-special-title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hero-special-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    animation: widthPulse 2s ease-in-out infinite;
+}
+
+@keyframes widthPulse {
+
+    0%,
+    100% {
+        width: 100px;
+        opacity: 0.8;
+    }
+
+    50% {
+        width: 180px;
+        opacity: 1;
+    }
+}
+
+.hero-special-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-dark);
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+.hero-special-features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.feature-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    padding: 10px 25px;
+    border-radius: 60px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.feature-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--white), var(--cream));
+}
+
+.feature-badge i {
+    color: var(--gold);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-badge:hover i {
+    transform: rotate(360deg);
+}
+
+.pricing-section {
+    padding: 20px 0 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+.tariff-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
+}
+
+.tariff-btn {
+    padding: 12px 35px;
+    border: 2px solid var(--gold);
+    background: transparent;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--gold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    z-index: 2;
+}
+
+.tariff-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.15);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease-out, height 0.4s ease-out;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.tariff-btn:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.tariff-btn.active {
+    background: var(--gold);
+    color: var(--white);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+.tariff-btn:hover:not(.active) {
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateY(-2px);
+}
+
+.tariff-hit,
+.tariff-top {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 60px;
+    font-weight: 600;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.tariff-hit {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.tariff-top {
+    background: linear-gradient(135deg, #e74c3c, #e67e22);
+}
+
+.tariff-card {
+    max-width: 600px;
+    margin: 30px auto 0;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    display: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    transform: translateY(20px);
+    overflow: visible;
+}
+
+.tariff-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.18;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tariff-card>*:not(.tariff-bg-image) {
+    position: relative;
+    z-index: 2;
+}
+
+.tariff-card.active {
+    display: block;
+    animation: cardAppear 0.6s forwards;
+}
+
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardDisappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.tariff-card-popular {
+    border: 3px solid var(--gold);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.25);
+    position: relative;
+    overflow: visible;
+}
+
+.tariff-card-popular::after {
+    content: '★';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+    color: var(--gold);
+    opacity: 0.1;
+    transform: rotate(15deg);
+    z-index: 3;
+}
+
+.tariff-card-popular>*:not(.tariff-bg-image):not(.tariff-badge) {
+    position: relative;
+    z-index: 2;
+}
+
+.tariff-card-top {
+    border: 3px solid #e74c3c;
+    box-shadow: 0 25px 50px rgba(231, 76, 60, 0.25);
+    position: relative;
+    overflow: visible;
+}
+
+.tariff-card-top::after {
+    content: '👑';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+    opacity: 0.1;
+    transform: rotate(15deg);
+    z-index: 3;
+}
+
+.tariff-card-top>*:not(.tariff-bg-image):not(.tariff-badge) {
+    position: relative;
+    z-index: 2;
+}
+
+.tariff-badge {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    padding: 6px 25px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    z-index: 30;
+    border: 2px solid var(--white);
+    width: 70%;
+    text-align: center;
+}
+
+.tariff-card-popular .tariff-badge {
+    background: linear-gradient(135deg, #f1c40f, #e67e22);
+    animation: badgeGlow 2s ease-in-out infinite;
+}
+
+.tariff-card-top .tariff-badge {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    animation: badgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 12px 30px rgba(212, 175, 55, 0.7);
+    }
+}
+
+.tariff-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 25px 0 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.tariff-count {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--gold-dark);
+    margin-bottom: 10px;
+    font-weight: 500;
+    background: rgba(212, 175, 55, 0.1);
+    padding: 5px 18px;
+    border-radius: 60px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed var(--gold);
+}
+
+.tariff-zones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.zone-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--cream);
+    padding: 8px 20px;
+    border-radius: 60px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.zone-item:hover {
+    background: var(--gold-light);
+    transform: scale(1.05);
+}
+
+.zone-item i {
+    color: var(--gold);
+}
+
+.tariff-price-block {
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+}
+
+.economy-counter {
+    display: inline-block;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 60px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    animation: bounce 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.tariff-old-price {
+    font-size: 1.4rem;
+    color: var(--gray-dark);
+    text-decoration: line-through;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.tariff-new-price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+    margin: 8px 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+    animation: pricePulse 2s ease-in-out infinite;
+}
+
+@keyframes pricePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.tariff-card-top .tariff-new-price {
+    color: #e74c3c;
+    font-size: 4rem;
+    text-shadow: 2px 2px 0 rgba(231, 76, 60, 0.2);
+}
+
+.tariff-economy {
+    display: inline-block;
+    background: rgba(39, 174, 96, 0.15);
+    color: #27ae60;
+    padding: 5px 20px;
+    border-radius: 60px;
+    font-weight: 600;
+    margin-top: 8px;
+    border: 1px solid #27ae60;
+    font-size: 0.9rem;
+}
+
+.tariff-features {
+    list-style: none;
+    margin: 3px 0;
+}
+
+.tariff-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3px;
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.tariff-features li:hover {
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateX(5px);
+}
+
+.tariff-features i {
+    color: var(--gold);
+    font-size: 1rem;
+    width: 20px;
+}
+
+.tariff-card-top .tariff-features i {
+    color: #e74c3c;
+}
+
+.tariff-btn-order {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0 10px;
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.tariff-card-top .tariff-btn-order {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
+}
+
+.tariff-btn-order::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.tariff-btn-order:hover::before {
+    left: 100%;
+}
+
+.tariff-btn-order:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.5);
+}
+
+.tariff-card-top .tariff-btn-order:hover {
+    box-shadow: 0 20px 40px rgba(231, 76, 60, 0.5);
+}
+
+.tariff-payment {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: var(--gray-dark);
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.tariff-payment i {
+    color: var(--gold);
+    margin-right: 5px;
+}
+
+.tariff-card-top .tariff-payment i {
+    color: #e74c3c;
+}
+
+.benefits-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    position: relative;
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.benefit-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 50px rgba(212, 175, 55, 0.15);
+    border-color: var(--gold);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.4s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+    background: var(--gold);
+    transform: rotateY(180deg);
+}
+
+.benefit-card:hover .benefit-icon i {
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: var(--gold);
+    transition: all 0.4s ease;
+}
+
+.benefit-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.metro-info {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    padding: 40px 0;
+    color: var(--white);
+    text-align: center;
+}
+
+.metro-info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.metro-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.metro-item i {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.metro-item span {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.metro-item small {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.booking-section {
+    padding: 60px 0;
+}
+
+.booking-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    border-radius: 30px;
+    padding: 40px;
+    border: 2px solid var(--gold);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.15);
+}
+
+.booking-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.booking-info p {
+    color: var(--gray-dark);
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.booking-list {
+    list-style: none;
+}
+
+.booking-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.booking-list i {
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    font-size: 0.95rem;
+    background: var(--white);
+    transition: all 0.3s ease;
+    resize: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+    transform: scale(1.02);
+}
+
+.booking-form .btn-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    padding: 14px 30px;
+    border-radius: 60px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.booking-form .btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+}
+
+.booking-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.booking-actions .btn-outline-gold {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--gold);
+    border-radius: 60px;
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s ease;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.booking-actions .btn-outline-gold:hover {
+    background: var(--gold);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.reviews-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-section::before {
+    content: '“';
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    font-size: 300px;
+    font-family: serif;
+    color: var(--gold);
+    opacity: 0.05;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.review-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+    border-color: var(--gold);
+}
+
+.review-card::before {
+    content: '“';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+    font-family: serif;
+    color: var(--gold);
+    opacity: 0.2;
+}
+
+.reviewer {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.reviewer h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.review-stars {
+    color: var(--gold);
+    font-size: 0.8rem;
+}
+
+.review-text {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.reviews-more {
+    text-align: center;
+}
+
+.reviews-more .btn-outline-gold {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 2px solid var(--gold);
+    border-radius: 60px;
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.reviews-more .btn-outline-gold:hover {
+    background: var(--gold);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}
+
+.reviews-more .btn-outline-gold i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.reviews-more .btn-outline-gold:hover i {
+    transform: translateX(5px);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.footer-social a {
+    color: var(--gold);
+    font-size: 1.3rem;
+    transition: all 0.4s ease;
+    width: 48px;
+    height: 48px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: var(--white);
+    background: var(--gold);
+    transform: translateY(-5px) rotate(360deg);
+    border-color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-special-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-special-title {
+        font-size: 2rem;
+    }
+
+    .hero-special-title::after {
+        width: 80px;
+    }
+
+    @keyframes widthPulse {
+
+        0%,
+        100% {
+            width: 80px;
+            opacity: 0.8;
+        }
+
+        50% {
+            width: 140px;
+            opacity: 1;
+        }
+    }
+
+    .tariff-switcher {
+        gap: 8px;
+    }
+
+    .tariff-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .tariff-card {
+        padding: 25px 20px;
+        max-width: 100%;
+    }
+
+    .tariff-title {
+        font-size: 1.6rem;
+        margin: 5px 0 5px;
+    }
+
+    .tariff-new-price {
+        font-size: 3rem;
+    }
+
+    .tariff-card-top .tariff-new-price {
+        font-size: 3.5rem;
+    }
+
+    .tariff-zones {
+        gap: 10px;
+    }
+
+    .zone-item {
+        padding: 6px 15px;
+        font-size: 0.85rem;
+    }
+
+    .tariff-features li {
+        font-size: 0.9rem;
+    }
+
+    .tariff-btn-order {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .booking-card {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+        gap: 25px;
+    }
+
+    .booking-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .metro-info-content {
+        gap: 20px;
+    }
+
+    .metro-item {
+        font-size: 1.1rem;
+    }
+
+    .metro-item i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-special-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-special-features {
+        gap: 10px;
+    }
+
+    .feature-badge {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .tariff-btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .tariff-hit,
+    .tariff-top {
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        top: -10px;
+        right: -8px;
+    }
+
+    .tariff-card {
+        padding: 20px 15px;
+    }
+
+    .tariff-badge {
+        padding: 5px 20px;
+        font-size: 0.8rem;
+        top: -40px;
+        width: 70%;
+        text-align: center;
+    }
+
+    .tariff-title {
+        font-size: 1.5rem;
+    }
+
+    .tariff-count {
+        font-size: 0.9rem;
+        padding: 4px 15px;
+    }
+
+    .tariff-new-price {
+        font-size: 2.5rem;
+    }
+
+    .tariff-card-top .tariff-new-price {
+        font-size: 3rem;
+    }
+
+    .tariff-old-price {
+        font-size: 1.2rem;
+    }
+
+    .economy-counter {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+
+    .tariff-economy {
+        font-size: 0.8rem;
+        padding: 4px 15px;
+    }
+
+    .tariff-features li {
+        font-size: 0.85rem;
+        gap: 8px;
+    }
+
+    .tariff-btn-order {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .booking-form input,
+    .booking-form textarea {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .booking-form .btn-gold {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .metro-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .metro-item span {
+        text-align: center;
+    }
+}

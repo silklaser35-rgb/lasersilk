@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LaserSilk — студия лазерной и электрэпиляции на Головинском шоссе | Москва</title>
+    <meta name="description"
+        content="Лазерная эпиляция в Москве на м. Водный стадион. Безболезненно, без вросших волос. Доступные цены, скидка 30% новым клиентам. Работаем с 08:30 до 22:00 ежедневно.">
+    <meta name="keywords"
+        content="лазерная эпиляция москва, эпиляция водный стадион, лазерная эпиляция голова, удаление волос, лазерная эпиляция цена, лазерная эпиляция Головинское шоссе, эпиляция москва">
+    <meta name="author" content="LaserSilk">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://lasersilk.ru/">
+
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+
+    <meta property="og:title" content="LaserSilk — студия лазерной и электрэпиляции в Москве">
+    <meta property="og:description"
+        content="Лазерная эпиляция в Москве на м. Водный стадион. Безболезненно, без вросших волос. Скидка 30% на первое посещение. Работаем с 08:30 до 22:00.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lasersilk.ru/">
+    <meta property="og:image" content="https://lasersilk.ru/img/logo.webp">
+    <meta property="og:locale" content="ru_RU">
+
+    <meta name="geo.region" content="RU-MOW">
+    <meta name="geo.placename" content="Москва">
+    <meta name="geo.position" content="55.839810;37.489491">
+    <meta name="ICBM" content="55.839810, 37.489491">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=test&lang=ru_RU"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="discount-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-gold">
+                <i class="fas fa-crown modal-crown"></i>
+                <h2>−30% на первое посещение</h2>
+                <p>Познакомьтесь с мастером и оцените качество процедуры со скидкой. Предложение для новых клиентов.</p>
+                <a href="#booking-form" class="btn btn-gold modal-btn" id="modalBookingBtn">Хочу скидку</a>
+            </div>
+        </div>
+    </div>
+    <div id="diodeModal" class="procedure-modal">
+        <div class="procedure-modal-content">
+            <span class="close-procedure-modal" id="closeDiodeModal">&times;</span>
+            <h2>Диодное омоложение лица</h2>
+            <img src="img/diode.webp" alt="Диодное омоложение лица">
+            <p>Диодное омоложение — это современная процедура, которая стимулирует выработку коллагена и эластина,
+                улучшает тонус кожи, сужает поры и разглаживает мелкие морщины.</p>
+            <h3>Как проходит процедура:</h3>
+            <p>Процедура проводится курсом из 10 сеансов с интервалом 7-10 дней. Во время сеанса вы ощущаете приятное
+                тепло. Лазер воздействует на глубокие слои кожи, запуская процессы регенерации.</p>
+            <h3>Результат:</h3>
+            <ul>
+                <li>Подтянутая и упругая кожа</li>
+                <li>Сужение пор</li>
+                <li>Разглаживание мелких морщин</li>
+                <li>Ровный тон лица</li>
+            </ul>
+            <a href="#booking-form" class="btn btn-gold" style="margin-top: 20px; width: 100%;">Записаться</a>
+        </div>
+    </div>
+
+    <div id="electroModal" class="procedure-modal">
+        <div class="procedure-modal-content">
+            <span class="close-procedure-modal" id="closeElectroModal">&times;</span>
+            <h2>Электроэпиляция Xilia Epil 5</h2>
+            <img src="img/electro.webp" alt="Электроэпиляция Xilia Epil 5">
+            <p>Электроэпиляция на аппарате Xilia Epil 5 — это единственный метод удаления волос навсегда, признанный FDA.
+                Подходит для всех типов волос и любого цвета кожи.</p>
+            <h3>Преимущества Xilia Epil 5:</h3>
+            <ul>
+                <li>Удаляет волосы любого цвета и толщины</li>
+                <li>Безболезненная технология</li>
+                <li>Высокая скорость обработки</li>
+                <li>Подходит для любых зон</li>
+            </ul>
+            <h3>Как проходит процедура:</h3>
+            <p>Тончайшая игла-электрод вводится в волосяной фолликул и подает слабый разряд тока, разрушая его.
+                Процедура занимает от 30 минут до 2 часов в зависимости от зоны.</p>
+            <a href="#booking-form" class="btn btn-gold" style="margin-top: 20px; width: 100%;">Записаться</a>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.webp" alt="LaserSilk" width="120" height="35">
+                    <span class="logo-text">LaserSilk</span>
+                </a>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#services" class="nav-link">Услуги</a></li>
+                    <li><a href="#prices" class="nav-link">Цены</a></li>
+                    <li><a href="#abonements" class="nav-link">Абонементы</a></li>
+                    <li><a href="#faq" class="nav-link">Вопросы</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:89915744717" class="header-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>8 (991) 574-47-17</span>
+                </a>
+                <a href="#booking-form" class="btn btn-gold header-btn">Записаться</a>
+            </div>
+
+            <div class="mobile-actions">
+                <a href="tel:89915744717" class="mobile-icon"><i class="fas fa-phone-alt"></i></a>
+                <a href="#booking-form" class="mobile-icon"><i class="fas fa-calendar-check"></i></a>
+                <button class="mobile-icon menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-label">Студия лазерной и электрэпиляции</span>
+                    <h1>Лазерная эпиляция <span class="gold-text">без боли</span> и навсегда</h1>
+                    <p class="hero-subtitle">Безболезненная лазерная эпиляция на современном оборудовании. Подходит для
+                        любого типа кожи.</p>
+
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Быстро — от 5 минут</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Безопасно для любой кожи</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="fas fa-snowflake"></i>
+                            <span>С системой охлаждения</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#booking-form" class="btn btn-gold btn-large">Получить консультацию</a>
+                        <a href="#prices" class="btn btn-outline-gold">Посмотреть цены</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="img/hero.webp" alt="LaserSilk студия лазерной и электрэпиляции" class="hero-image-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>О студии LaserSilk</h2>
+                        <p class="about-text">Мы — студия лазерной и электрэпиляции в Москве. Используем современный диодный
+                            лазер EVOLUTION 808 нм от Prof Beauty — аппарат экспертного класса, который подходит для
+                            всех типов кожи.</p>
+                        <p class="about-text">Все наши мастера имеют медицинское образование и регулярно повышают
+                            квалификацию. Мы гарантируем безопасность, комфорт и результат уже после первого сеанса.</p>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">2000+</span>
+                                <span class="stat-label">довольных клиентов</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">7 лет</span>
+                                <span class="stat-label">опыта работы</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">рекомендуют нас</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-schedule">
+                        <div class="schedule-card">
+                            <div class="schedule-header">
+                                <i class="fas fa-clock"></i>
+                                <h3>Время работы</h3>
+                            </div>
+                            <p class="schedule-time">08:30 — 22:00</p>
+                            <p class="schedule-desc">Ежедневно, без выходных</p>
+                            <div class="schedule-divider"></div>
+                            <p class="schedule-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Головинское ш., 3, офис 301
+                            </p>
+                            <p class="schedule-metro">м. Водный стадион</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Услуги и цены</h2>
+                    <p class="section-subtitle">Выберите зону для эпиляции</p>
+                </div>
+
+                <div class="filter-wrapper">
+                    <div class="filter-buttons">
+                        <button class="filter-btn" data-filter="women">Для женщин</button>
+                        <button class="filter-btn" data-filter="men">Для мужчин</button>
+                    </div>
+                </div>
+
+                <div id="prices" class="prices-grid">
+                    <div class="price-category" data-category="women">
+                        <h3>Для женщин</h3>
+                        <div class="price-cards">
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Лицо полностью</h4>
+                                    <span class="price-value">2 400 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Верхняя губа</h4>
+                                    <span class="price-value">850 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Подбородок</h4>
+                                    <span class="price-value">850 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Бакенбарды</h4>
+                                    <span class="price-value">950 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Подмышки</h4>
+                                    <span class="price-value">1 200 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Руки полностью</h4>
+                                    <span class="price-value">2 450 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Руки до локтя</h4>
+                                    <span class="price-value">1 800 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Кисти рук</h4>
+                                    <span class="price-value">500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Ареолы</h4>
+                                    <span class="price-value">800 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Линия живота</h4>
+                                    <span class="price-value">700 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Живот полностью</h4>
+                                    <span class="price-value">1 750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Поясница</h4>
+                                    <span class="price-value">1 950 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Бикини классика</h4>
+                                    <span class="price-value">2 250 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Глубокое бикини</h4>
+                                    <span class="price-value">2 500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Меж ягодичная зона</h4>
+                                    <span class="price-value">700 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Ягодицы</h4>
+                                    <span class="price-value">2 100 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Ноги полностью</h4>
+                                    <span class="price-value">4 200 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Бедро</h4>
+                                    <span class="price-value">3 200 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Голень</h4>
+                                    <span class="price-value">2 350 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Пальцы ног</h4>
+                                    <span class="price-value">500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Спина полностью</h4>
+                                    <span class="price-value">3 450 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Тело полностью</h4>
+                                    <span class="price-value">7 900 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-category" data-category="men">
+                        <h3>Для мужчин</h3>
+                        <div class="price-cards">
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Лицо полностью</h4>
+                                    <span class="price-value">2 800 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Верхняя губа</h4>
+                                    <span class="price-value">1 000 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Подбородок</h4>
+                                    <span class="price-value">1 000 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Бакенбарды</h4>
+                                    <span class="price-value">1 100 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Подмышки</h4>
+                                    <span class="price-value">1 350 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Руки полностью</h4>
+                                    <span class="price-value">2 950 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Руки до локтя</h4>
+                                    <span class="price-value">2 150 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Кисти рук</h4>
+                                    <span class="price-value">600 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Грудь</h4>
+                                    <span class="price-value">2 650 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Линия живота</h4>
+                                    <span class="price-value">950 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Живот полностью</h4>
+                                    <span class="price-value">2 350 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Поясница</h4>
+                                    <span class="price-value">2 500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Ноги полностью</h4>
+                                    <span class="price-value">4 850 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Бедро</h4>
+                                    <span class="price-value">3 950 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Голени</h4>
+                                    <span class="price-value">2 850 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Пальцы ног</h4>
+                                    <span class="price-value">600 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Глубокое бикини</h4>
+                                    <span class="price-value">3 500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="price-card">
+                                <div class="price-card-header">
+                                    <h4>Тело полностью</h4>
+                                    <span class="price-value">13 500 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-services">
+                    <h3>Специальные процедуры</h3>
+                    <div class="special-grid">
+                        <div class="special-card" id="diodeRejuvenation">
+                            <i class="fas fa-star"></i>
+                            <h4>Диодное омоложение лица</h4>
+                            <p>Курс 10 сеансов</p>
+                            <span class="price">2 900 ₽/сеанс</span>
+                            <span class="learn-more">Узнать подробнее <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                        <div class="special-card" id="electroepilation">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Электроэпиляция Xilia Epil 5</h4>
+                            <p>1 час процедуры</p>
+                            <span class="price">3 100 ₽</span>
+                            <span class="learn-more">Узнать подробнее <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abonements" class="abonements">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Абонементы и пакеты</h2>
+                    <p class="section-subtitle">Выгодные предложения для наших клиентов</p>
+                </div>
+
+                <div class="abonement-tabs">
+                    <button class="tab-btn active" data-tab="1">1 посещение</button>
+                    <button class="tab-btn" data-tab="6">6 посещений</button>
+                    <button class="tab-btn" data-tab="10">10 посещений</button>
+                    <button class="tab-btn" data-tab="pack">Пакеты</button>
+                </div>
+
+                <div class="tab-content active" data-tab="1">
+                    <div class="abonement-grid">
+                        <div class="abonement-card">
+                            <h4>Подмышки</h4>
+                            <p class="abonement-price">1 250 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Руки до локтя</h4>
+                            <p class="abonement-price">1 800 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Бикини классика</h4>
+                            <p class="abonement-price">2 250 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Глубокое бикини</h4>
+                            <p class="abonement-price">2 500 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Голени</h4>
+                            <p class="abonement-price">2 350 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Ноги полностью</h4>
+                            <p class="abonement-price">4 200 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card popular">
+                            <div class="badge">Хит</div>
+                            <h4>Все тело</h4>
+                            <p class="abonement-price">7 900 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                    </div>
+                    <p class="abonement-note">
+                        <i class="fas fa-info-circle"></i> После первой процедуры на диодном лазере выпадает до 70-80%
+                        волос. Для максимального результата рекомендуется курс 6-10 процедур.
+                    </p>
+                </div>
+
+                <div class="tab-content" data-tab="6">
+                    <div class="abonement-grid">
+                        <div class="abonement-card">
+                            <h4>Подмышки</h4>
+                            <p class="abonement-price">5 600 ₽</p>
+                            <span class="abonement-save">Экономия 1 600 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Руки до локтя</h4>
+                            <p class="abonement-price">9 500 ₽</p>
+                            <span class="abonement-save">Экономия 2 500 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Бикини классика</h4>
+                            <p class="abonement-price">12 500 ₽</p>
+                            <span class="abonement-save">Экономия 3 500 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Глубокое бикини</h4>
+                            <p class="abonement-price">13 000 ₽</p>
+                            <span class="abonement-save">Экономия 4 000 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Голени</h4>
+                            <p class="abonement-price">12 700 ₽</p>
+                            <span class="abonement-save">Экономия 3 200 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Ноги полностью</h4>
+                            <p class="abonement-price">23 200 ₽</p>
+                            <span class="abonement-save">Экономия 5 000 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card popular">
+                            <div class="badge">Выгода</div>
+                            <h4>Все тело</h4>
+                            <p class="abonement-price">44 500 ₽</p>
+                            <span class="abonement-save">Экономия 7 900 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-tab="10">
+                    <div class="abonement-grid">
+                        <div class="abonement-card">
+                            <h4>Подмышки</h4>
+                            <p class="abonement-price">10 100 ₽</p>
+                            <span class="abonement-save">Экономия 2 400 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Руки до локтя</h4>
+                            <p class="abonement-price">16 000 ₽</p>
+                            <span class="abonement-save">Экономия 4 000 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Бикини классика</h4>
+                            <p class="abonement-price">20 500 ₽</p>
+                            <span class="abonement-save">Экономия 5 500 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Глубокое бикини</h4>
+                            <p class="abonement-price">23 000 ₽</p>
+                            <span class="abonement-save">Экономия 6 000 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Голени</h4>
+                            <p class="abonement-price">21 500 ₽</p>
+                            <span class="abonement-save">Экономия 5 500 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card">
+                            <h4>Ноги полностью</h4>
+                            <p class="abonement-price">39 800 ₽</p>
+                            <span class="abonement-save">Экономия 8 200 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="abonement-card popular">
+                            <div class="badge">Макс. выгода</div>
+                            <h4>Все тело</h4>
+                            <p class="abonement-price">75 600 ₽</p>
+                            <span class="abonement-save">Экономия 12 400 ₽</span>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-tab="pack">
+                    <div class="packages-grid">
+                        <div class="package-card">
+                            <h4>Подмышки + глубокое бикини</h4>
+                            <p class="package-price">3 350 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="package-card">
+                            <h4>Подмышки + глубокое бикини + голени</h4>
+                            <p class="package-price">4 900 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="package-card">
+                            <h4>Подмышки + голени</h4>
+                            <p class="package-price">3 250 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="package-card">
+                            <h4>Подмышки + ноги полностью</h4>
+                            <p class="package-price">4 950 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="package-card">
+                            <h4>Глубокое бикини + голени</h4>
+                            <p class="package-price">4 350 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="package-card">
+                            <h4>Глубокое бикини + ноги полностью</h4>
+                            <p class="package-price">5 850 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                        <div class="package-card popular">
+                            <div class="badge">Топ</div>
+                            <h4>Подмышки + глубокое бикини + ноги полностью</h4>
+                            <p class="package-price">6 900 ₽</p>
+                            <a href="#booking-form" class="btn btn-outline-gold btn-small">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-link">
+                    <a href="abonementy/" class="btn btn-gold">Все абонементы и пакеты</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="yandex-review">
+            <div class="container">
+                <div class="review-header">
+                    <i class="fab fa-yandex"></i>
+                    <span>Рейтинг на Яндекс Картах</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                </div>
+                <div id="yandex-map" class="map-container"></div>
+                <div class="map-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Головинское шоссе, 3, Москва, 3 этаж, офис 301</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-form" class="booking">
+            <div class="container">
+                <div class="booking-wrapper">
+                    <div class="booking-info">
+                        <h2>Запишитесь онлайн</h2>
+                        <p class="booking-info-text">Оставьте заявку, и мы подберем удобное время</p>
+                        <ul class="booking-benefits">
+                            <li><i class="fas fa-check-circle"></i> Подарок для новых клиентов</li>
+                            <li><i class="fas fa-check-circle"></i> Бесплатная консультация</li>
+                            <li><i class="fas fa-check-circle"></i> Работаем с 08:30 до 22:00</li>
+                        </ul>
+                        <div class="booking-highlight">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Онлайн запись</span>
+                        </div>
+                    </div>
+                    <form id="appointmentForm" class="booking-form">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__" required>
+                        <textarea name="comment" placeholder="Дополнительная информация (не обязательно)"
+                            rows="3"></textarea>
+                        <button type="submit" class="btn btn-gold btn-large">Отправить заявку</button>
+                        <p class="form-agreement">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <h2>Отзывы наших клиентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">Е</div>
+                                <div>
+                                    <h4>Елена</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Большое спасибо мастеру Ирине за отличную работу. Очень вежливый и
+                            приятный в общении специалист. Процедура проходит максимально комфортно, всё объясняет,
+                            следит за ощущениями, создает спокойную атмосферу. Результатом более чем довольна, эффект
+                            виден с самой первой процедуры. Очень рекомендую этого замечательного мастера всем, кто
+                            ценит профессионализм, бережное отношение и прекрасный результат! Спасибо Вам!</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">В</div>
+                                <div>
+                                    <h4>Виктория</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">По совету подруг попала в руки великолепной Ирины! Не только лазер можно
+                            сделать, кстати! Я перешла на электроэпиляцию, чему несказанно рада. Аппарат и иглы у Ирины
+                            наивысшего качества, даже без анестезии можно провести процедуры (конечно не во всех
+                            местах). Ирина очень приятная девушка и профессионал своего дела, стопроц. Кабинет уютный
+                            очень, вкусняшки есть еще) В общем, уходить не хочется, истинный кайф)</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">К</div>
+                                <div>
+                                    <h4>Ксения</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Отличное место. Очень удобное расположение, в 3 минутах от метро. Рядом
+                            большой ТЦ с парковкой если приезжать на машине. Остались только приятные впечатления от
+                            процедуры! Красивая студия, очень уютно и чисто. Современное, новое оборудование. Специалист
+                            Ирина ответила на все мои вопросы, подробно рассказала какой результат ждать от процедуры.
+                            Дала нужные рекомендации. Эффект виден после первого сеанса. Очень рада что нашла такое
+                            замечательное место. Теперь за гладкой кожей только сюда. Спасибо ещё раз, за то, что
+                            работаете на результат! Это очень ценно в наше время</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">П</div>
+                                <div>
+                                    <h4>Полина</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Комфортный кабинет, качественное лазерное оборудование и, самое главное,
+                            заботливые и чуткие руки мастера Елены. Ирина и Елена работают в паре. Девочки делают свою
+                            работу честно и всегда качественно. Большое спасибо! Очень рада , что нашла вас! Приезжаю
+                            издалека, салон менять не собираюсь</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">М</div>
+                                <div>
+                                    <h4>Мария</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Добрый день. Делала электроэпиляцию зоны лица у мастера Ирины, результат
+                            превосходный. В студии очень уютно, атмосфера приятная, Ирина вообще человек очень хороший,
+                            отзывчивый, доброжелательный, и как мастер профессионал своего дела.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">Д</div>
+                                <div>
+                                    <h4>Денис</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Все понравилось девушка была в восторге ну и мне было где припарковаться
+                            и комфортно подождать её во время процедуры за вкусный кофе отдельное спасибо. Мы оба
+                            остались довольны она от процедуры ну а я от комфортного ожидания. Спасибо за сервис и
+                            клиентоориентированность.</p>
+                    </div>
+                </div>
+
+                <div class="reviews-more">
+                    <a href="https://yandex.ru/maps/org/lasersilk/203450808648/reviews/?indoorLevel=1&ll=37.489491%2C55.839810&z=17.17"
+                        target="_blank" class="btn btn-outline-gold">Читать больше отзывов на Яндекс Картах <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Часто задаваемые вопросы</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Что такое лазерная эпиляция?
+                        </div>
+                        <div class="accordion-body">
+                            <p>Лазерная эпиляция — это косметологическая процедура удаления волос с помощью импульсного
+                                лазерного излучения. Луч лазера воздействует на меланин в волосяном фолликуле, нагревает
+                                и разрушает его. Волос перестает расти. Мы используем диодный лазер EVOLUTION с длиной
+                                волны 808 нм, который эффективен для любого типа кожи.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Чем лазерная эпиляция лучше других способов удаления волос?
+                        </div>
+                        <div class="accordion-body">
+                            <p>В отличие от бритья, воска или шугаринга, лазерная эпиляция решает проблему роста волос
+                                навсегда. Преимущества: безболезненность (легкое покалывание), отсутствие вросших волос
+                                и раздражения, быстрота процедуры (от 5 до 20 минут), долговременный результат. После
+                                курса процедур кожа остается гладкой на годы.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Сколько сеансов нужно для полного удаления волос?
+                        </div>
+                        <div class="accordion-body">
+                            <p>В среднем требуется 6-10 процедур. Это связано с циклами роста волос: лазер воздействует
+                                только на волосы в активной фазе (анаген). Интервал между сеансами — от 3 до 8 недель в
+                                зависимости от зоны. Уже после первого сеанса выпадает до 70-80% волос.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            На каком лазере вы работаете и почему?
+                        </div>
+                        <div class="accordion-body">
+                            <p>В студии LaserSilk мы используем современный диодный лазер <strong>EVOLUTION</strong> от
+                                компании <strong>Prof Beauty</strong> с длиной волны 808 нм. Это аппарат экспертного
+                                класса с рядом преимуществ:</p>
+                            <ul>
+                                <li><strong>Универсальность:</strong> Подходит для любого фототипа кожи, включая смуглую
+                                    и загорелую.</li>
+                                <li><strong>Комфорт:</strong> Мощная система охлаждения сапфирового наконечника
+                                    (скорость прокачки 2,6 л/мин) гарантирует безболезненность и защиту от перегрева.
+                                </li>
+                                <li><strong>Эффективность:</strong> Регулируемая частота импульсов (1-10 Гц) и ширина
+                                    импульса до 320 мс позволяют индивидуально подбирать параметры для максимального
+                                    результата.</li>
+                                <li><strong>Надежность:</strong> Профессиональное оборудование с низким
+                                    энергопотреблением и высокой скоростью работы.</li>
+                            </ul>
+                            <p>Курс процедур составляет 6-10 сеансов, после чего наступает стойкий результат.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Когда будут видны первые результаты?
+                        </div>
+                        <div class="accordion-body">
+                            <p>Сразу после процедуры вы увидите, что часть волос исчезла. Через 10-14 дней оставшиеся
+                                волосы начинают выпадать. Полную картину можно оценить через 3-4 недели. Кожа становится
+                                гладкой, а новые волосы растут медленнее и становятся тоньше.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Есть ли противопоказания?
+                        </div>
+                        <div class="accordion-body">
+                            <p>Да, как у любой медицинской процедуры. Основные противопоказания: беременность и
+                                лактация, онкология, эпилепсия, сахарный диабет в стадии декомпенсации, кожные
+                                заболевания в зоне обработки, прием фотосенсибилизирующих препаратов, возраст до 18 лет.
+                                Полный список уточняйте у администратора при записи.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Безопасна ли процедура?
+                        </div>
+                        <div class="accordion-body">
+                            <p>Лазерная эпиляция безопасна при проведении квалифицированным специалистом. Луч проникает
+                                только на глубину волосяного фолликула (2-3 мм) и не влияет на внутренние органы. Все
+                                наши мастера имеют медицинское образование, а оборудование сертифицировано
+                                Росздравнадзором.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Какие скидки и акции у вас действуют?
+                        </div>
+                        <div class="accordion-body">
+                            <p>Для новых клиентов — скидка 30% на первое посещение. Также у нас есть абонементы на 6 и
+                                10 сеансов со скидкой до 15%, пакетные предложения (например, подмышки+бикини со
+                                скидкой), программы лояльности для постоянных клиентов. Оставьте заявку, и администратор
+                                подробно расскажет о всех действующих акциях.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <div class="contacts-grid">
+                    <div class="contacts-info">
+                        <h2>Контакты</h2>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p>Телефон для записи</p>
+                                <a href="tel:89915744717" class="contact-link">8 (991) 574-47-17</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Адрес студии</p>
+                                <span>Головинское шоссе, 3, Москва, 3 этаж, офис 301</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <p>Время работы</p>
+                                <span>Ежедневно с 08:30 до 22:00</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-subway"></i>
+                            <div>
+                                <p>Метро</p>
+                                <span>Водный стадион (10 минут пешком)</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/lasersilk2023" target="_blank" class="social-link"><i
+                                    class="fab fa-vk"></i></a>
+                            <a href="https://t.me/lasersilk2023" target="_blank" class="social-link"><i
+                                    class="fab fa-telegram-plane"></i></a>
+                        </div>
+                    </div>
+                    <div class="contacts-schedule">
+                        <div class="schedule-card-large">
+                            <h3>Как добраться</h3>
+                            <p><i class="fas fa-walking"></i> От метро Водный стадион: автобусы 65, 132, 123 до
+                                остановки «Головинское шоссе» (3 минуты) или 10 минут пешком.</p>
+                            <p><i class="fas fa-car"></i> На машине: съезд с Ленинградского шоссе на Головинское,
+                                ориентир — ТЦ "Водный". Есть бесплатная парковка для клиентов.</p>
+                            <p><i class="fas fa-building"></i> Вход в здание со стороны Головинского шоссе, центральный
+                                подъезд, домофон 301, 3 этаж.</p>
+                            <p class="schedule-note"><i class="fas fa-coffee"></i> В студии есть чай, кофе и уютная зона
+                                ожидания</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-main">
+                        <img src="img/logo.webp" alt="LaserSilk">
+                        <span class="footer-logo-text">LaserSilk</span>
+                    </div>
+                    <p>Студия лазерной и электрэпиляции в Москве</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#abonements">Абонементы</a></li>
+                        <li><a href="#faq">Вопросы</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h4>Контакты</h4>
+                    <a href="tel:89915744717">8 (991) 574-47-17</a>
+                    <p>Головинское ш., 3, офис 301</p>
+                    <p>Ежедневно 08:30–22:00</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="https://vk.com/lasersilk2023" target="_blank" class="footer-social-link"><i
+                        class="fab fa-vk"></i></a>
+                <a href="https://t.me/lasersilk2023" target="_blank" class="footer-social-link"><i
+                        class="fab fa-telegram-plane"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>© LASER SILK 2020 - <span id="current-year"></span>. Метро Водный стадион, Головинское шоссе, 3</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/imask@6.4.3/dist/imask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
