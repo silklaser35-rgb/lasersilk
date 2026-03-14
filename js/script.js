@@ -163,52 +163,81 @@ document.addEventListener('DOMContentLoaded', function () {
         myMap.geoObjects.add(myPlacemark);
     }
 
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxqukYEWqd8FYubRKBYJY3wMeOzlyp1tWb5oHhZPyPqKE_AKn2TYHHbXPYuyd3dUZIG/exec';
+
     const appointmentForm = document.getElementById('appointmentForm');
-
     if (appointmentForm) {
-        appointmentForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+        appointmentForm.addEventListener('submit', handleFormSubmit);
+    }
 
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+    const bookingForms = document.querySelectorAll('#bookingForm');
+    bookingForms.forEach(form => {
+        form.addEventListener('submit', handleFormSubmit);
+    });
 
-            console.log('Form submitted:', data);
+    async function handleFormSubmit(e) {
+        e.preventDefault();
 
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Отправлено!';
-            submitButton.disabled = true;
+        const form = e.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
 
-            setTimeout(() => {
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 3000);
+        submitButton.textContent = 'Отправка...';
+        submitButton.disabled = true;
 
-            this.reset();
+        const formData = {
+            name: form.querySelector('[name="name"]').value,
+            phone: form.querySelector('[name="phone"]').value,
+            comment: form.querySelector('[name="comment"], [name="message"]')?.value || '',
+            source: window.location.href
+        };
 
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.textContent = 'Спасибо! Мы свяжемся с вами в ближайшее время.';
-            successMessage.style.cssText = `
-                background: var(--gold);
-                color: white;
-                padding: 15px;
-                border-radius: var(--border-radius-small);
-                text-align: center;
-                margin-top: 20px;
-            `;
+        try {
+            const response = await fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
 
-            const oldMessage = this.querySelector('.success-message');
-            if (oldMessage) {
-                oldMessage.remove();
-            }
+            showMessage(form, 'success', 'Спасибо! Мы свяжемся с вами в ближайшее время.');
+            form.reset();
 
-            this.appendChild(successMessage);
+        } catch (error) {
+            console.error('Ошибка:', error);
+            showMessage(form, 'error', 'Произошла ошибка. Пожалуйста, попробуйте позже или позвоните нам.');
+        } finally {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    }
 
-            setTimeout(() => {
-                successMessage.remove();
-            }, 5000);
-        });
+    function showMessage(form, type, text) {
+        const oldMessage = form.querySelector('.form-message');
+        if (oldMessage) {
+            oldMessage.remove();
+        }
+
+        const message = document.createElement('div');
+        message.className = 'form-message';
+        message.textContent = text;
+        message.style.cssText = `
+            background: ${type === 'success' ? '#eec900' : '#ff4444'};
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        `;
+
+        form.appendChild(message);
+
+        setTimeout(() => {
+            message.remove();
+        }, 2000);
     }
 
     const navLinks = document.querySelectorAll('.nav-link');
