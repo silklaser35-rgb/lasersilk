@@ -63,55 +63,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 transform: translateY(-20px);
             }
         }
+        
+        @keyframes cardAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     `;
     document.head.appendChild(style);
-
-    function smoothScrollToElement(element, offset = 120) {
-        if (!element) return;
-        
-        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - offset;
-        
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
     
-    function handleHashOnLoad() {
+    setTimeout(() => {
         const activeCard = document.querySelector('.tariff-card.active');
-        
         if (activeCard) {
-            smoothScrollToElement(activeCard);
-        }
-    }
-    
-    function handleAnchorClicks() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                
-                const targetElement = document.querySelector(href);
-                if (targetElement && targetElement.classList.contains('tariff-card')) {
-                    e.preventDefault();
-                    
-                    history.pushState(null, null, href);
-                    
-                    if (!targetElement.classList.contains('active')) {
-                        const tariffNumber = href.replace('#tariff-', '');
-                        if (tariffNumber && tariffCards[tariffNumber]) {
-                            showTariff(tariffNumber);
-                        }
-                    }
-                    
-                    smoothScrollToElement(targetElement);
-                }
+            const headerOffset = 100;
+            const elementPosition = activeCard.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
-        });
-    }
-    
-    handleHashOnLoad();
-    window.addEventListener('hashchange', handleHashOnLoad);
-    handleAnchorClicks();
+        }
+    }, 0);
 });
