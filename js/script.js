@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const phoneInput = document.getElementById('phone');
-    if (phoneInput) {
+    if (phoneInput && typeof IMask !== 'undefined') {
         IMask(phoneInput, {
             mask: '+{7} (000) 000-00-00'
         });
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.price-card, .abonement-card, .special-card, .package-card');
+    const animatedElements = document.querySelectorAll('.price-card, .abonement-card, .special-card, .package-card, .faq-item, .blog-preview-card, .blog-card, .fade-up');
 
     animatedElements.forEach(el => {
         el.style.opacity = '0';

@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=test&lang=ru_RU"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
 
     <script type="application/ld+json">
     {
@@ -92,13 +93,13 @@
 
 <body>
     <div id="discount-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-gold">
-                <i class="fas fa-crown modal-crown"></i>
+        <div class="modal-content-new">
+            <span class="close-modal-new">&times;</span>
+            <div class="modal-overlay-panel">
+                <i class="fas fa-crown modal-crown-icon"></i>
                 <h2>−30% на первое посещение</h2>
                 <p>Познакомьтесь с мастером и оцените качество процедуры со скидкой. Предложение для новых клиентов.</p>
-                <a href="#booking-form" class="btn btn-gold modal-btn" id="modalBookingBtn">Хочу скидку</a>
+                <a href="#booking-form" class="btn btn-gold modal-btn-new" id="modalBookingBtn">Хочу скидку</a>
             </div>
         </div>
     </div>
@@ -162,6 +163,7 @@
                     <li><a href="#services" class="nav-link">Услуги и цены</a></li>
                     <li><a href="#abonements" class="nav-link">Абонементы</a></li>
                     <li><a href="#faq" class="nav-link">Вопросы об эпиляции</a></li>
+                    <li><a href="/blog/" class="nav-link">Блог</a></li>
                     <li><a href="#contacts" class="nav-link">Контакты</a></li>
                 </ul>
             </nav>
@@ -819,7 +821,59 @@
                 </div>
             </div>
         </section>
+        <section class="blog-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Полезные статьи об эпиляции</h2>
+                    <p class="section-subtitle">Советы экспертов, сравнения методов и ответы на частые вопросы</p>
+                </div>
 
+                <div class="blog-grid">
+                    <article class="blog-card" style="background-image: url('img/s1.webp');">
+                        <a href="/blog/lazernaya-vs-elektroepilyaciya/" style="text-decoration: none; color: inherit;">
+                            <div class="blog-card-overlay">
+                                <h2>Лазерная и электроэпиляция: что выбрать?</h2>
+                                <p>Сравнение методов, плюсы и минусы. Какой подходит именно вам.</p>
+                                <span class="read-more">Читать далее →</span>
+                                <span class="blog-views" data-url="/blog/lazernaya-vs-elektroepilyaciya/">
+                                    <i class="fas fa-eye"></i> <span class="views-count"></span>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" style="background-image: url('img/s2.webp');">
+                        <a href="/blog/10-mifov-o-lazernoy-epilyacii/" style="text-decoration: none; color: inherit;">
+                            <div class="blog-card-overlay">
+                                <h2>10 мифов о лазерной эпиляции</h2>
+                                <p>Правда и вымысел о процедуре. Узнайте, чего не стоит бояться.</p>
+                                <span class="read-more">Читать далее →</span>
+                                <span class="blog-views" data-url="/blog/10-mifov-o-lazernoy-epilyacii/">
+                                    <i class="fas fa-eye"></i> <span class="views-count"></span>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" style="background-image: url('img/s3.webp');">
+                        <a href="/blog/podgotovka-k-lazernoy-epilyacii/" style="text-decoration: none; color: inherit;">
+                            <div class="blog-card-overlay">
+                                <h2>Подготовка к лазерной эпиляции: чек-лист</h2>
+                                <p>Что можно и нельзя делать за 2 недели до процедуры. Полный гид.</p>
+                                <span class="read-more">Читать далее →</span>
+                                <span class="blog-views" data-url="/blog/podgotovka-k-lazernoy-epilyacii/">
+                                    <i class="fas fa-eye"></i> <span class="views-count"></span>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="/blog/" class="btn btn-gold">Все статьи блога</a>
+                </div>
+            </div>
+        </section>
         <section class="yandex-review">
             <div class="container">
                 <h3 style="text-align: center; margin-bottom: 5px; color: var(--gold); font-size: 1.5rem;">
@@ -866,7 +920,9 @@
                         <textarea name="comment" placeholder="Какая зона интересует? (например: бикини, ноги, подмышки)"
                             rows="3"></textarea>
                         <button type="submit" class="btn btn-gold btn-large">Отправить заявку</button>
-                        <p class="form-agreement">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                        <p class="form-agreement">Нажимая кнопку, вы соглашаетесь с <a href="/privacy/"
+                                style="color: var(--gold); text-decoration: underline;">политикой конфиденциальности</a>
+                        </p>
                     </form>
                 </div>
             </div>
@@ -1223,12 +1279,17 @@
             <div class="footer-bottom">
                 <p>© LASER SILK 2020 - <span id="current-year"></span>. Лазерная и электроэпиляция в Москве у метро
                     Водный стадион, Головинское шоссе, 3</p>
+                <p style="margin-top: 10px;">
+                    <a href="/privacy/" style="color: #999; text-decoration: none; font-size: 0.85rem;">Политика
+                        конфиденциальности</a>
+                </p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/imask@6.4.3/dist/imask.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/views-counter.js"></script>
 </body>
 
 </html>

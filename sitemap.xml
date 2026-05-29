@@ -2,32 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://laser-silk.ru/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-05-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://laser-silk.ru/abonementy/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-05-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laser-silk.ru/special/body/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-05-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://laser-silk.ru/special/bikini/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-05-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://laser-silk.ru/special/podyzhki-goleni/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-05-29</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/lazernaya-vs-elektroepilyaciya/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/10-mifov-o-lazernoy-epilyacii/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/podgotovka-k-lazernoy-epilyacii/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/skolko-stoit-lazernaya-epilyaciya-moskva/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/bolno-li-delat-lazernuyu-epilyaciyu/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/uhod-posle-lazernoy-epilyacii/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/pochemu-nuzhen-kurs-procedur/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/lazernaya-epilyaciya-glubokoe-bikini/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/diodniy-lazer-evolution-808/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://laser-silk.ru/blog/lazernaya-epilyaciya-vs-shugaring/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 </urlset>
