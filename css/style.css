@@ -1345,9 +1345,9 @@ h4 {
 
 .close-modal-new {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
+    top: 2px;
+    right: 5px;
+    font-size: 3rem;
     cursor: pointer;
     color: #fff;
     z-index: 10;

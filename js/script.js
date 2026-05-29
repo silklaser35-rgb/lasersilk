@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const modal = document.getElementById('discount-modal');
-    const closeModal = document.querySelector('.close-modal');
+    const closeModal = document.querySelector('.close-modal-new');
     const modalBookingBtn = document.getElementById('modalBookingBtn');
 
     if (modal && !sessionStorage.getItem('modalShown')) {
